@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.xishiqu.test.grpc";
+option java_outer_classname = "ServerA";
+option objc_class_prefix = "ServerA";
+
+package pb;
+
+// The greeting service definition.
+service ServerA {
+    //   Sends a greeting
+    rpc ServerAFunc (ServierARequest) returns (ServierAReply) {
+    }
+}
+
+// The request message containing the user's name.
+message ServierARequest {
+    string name = 1;
+}
+
+// The response message containing the greetings
+message ServierAReply {
+    string message = 1;
+}
